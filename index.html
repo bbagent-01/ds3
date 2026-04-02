@@ -97,8 +97,8 @@
     .bb-title { font-size: clamp(20px, 2vw, 32px); font-weight: 600; line-height: 1.1; letter-spacing: -0.01em; }
     .bb-body { font-size: 16px; font-weight: 400; line-height: 1.6; letter-spacing: -0.01em; }
     .bb-body-sm { font-size: 14px; font-weight: 400; line-height: 1.5; }
-    .bb-label { font-family: var(--bb-font-mono); font-size: 10px; font-weight: 300; letter-spacing: 0.05em; text-transform: uppercase; }
-    .bb-label-lg { font-family: var(--bb-font-mono); font-size: 12px; font-weight: 400; letter-spacing: 0.03em; text-transform: uppercase; }
+    .bb-label { font-family: var(--bb-font-mono); font-size: 10px; font-weight: 300; letter-spacing: 0.05em; text-transform: uppercase; padding: 6px 0; }
+    .bb-label-lg { font-family: var(--bb-font-mono); font-size: 12px; font-weight: 400; letter-spacing: 0.03em; text-transform: uppercase; padding: 6px 0; }
     .bb-mono { font-family: var(--bb-font-mono); font-size: 14px; line-height: 1.6; }
 
     /* ================================================
@@ -137,12 +137,49 @@
     .bb-grid--warm { background: var(--bb-border-warm); }
     .bb-grid--warm > * { background: var(--bb-cream-light); }
 
+    /* Line grid presets (1px gap visible lines) */
     .bb-grid-5 { grid-template-columns: 1.7fr 1fr 1fr 1fr 1.7fr; }
     .bb-grid-4 { grid-template-columns: repeat(4, 1fr); }
     .bb-grid-3 { grid-template-columns: repeat(3, 1fr); }
     .bb-grid-2 { grid-template-columns: repeat(2, 1fr); }
     .bb-col-span-2 { grid-column: span 2; }
     .bb-col-span-3 { grid-column: span 3; }
+    .bb-col-span-4 { grid-column: span 4; }
+    .bb-col-span-6 { grid-column: span 6; }
+    .bb-col-span-8 { grid-column: span 8; }
+    .bb-col-span-12 { grid-column: span 12; }
+
+    /* 12-Column Layout Grid */
+    .bb-cols { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; width: 100%; }
+    .bb-cols--tight { gap: 16px; }
+    .bb-cols--wide { gap: 32px; }
+    .bb-cols--none { gap: 0; }
+    .col-1 { grid-column: span 1; } .col-2 { grid-column: span 2; }
+    .col-3 { grid-column: span 3; } .col-4 { grid-column: span 4; }
+    .col-5 { grid-column: span 5; } .col-6 { grid-column: span 6; }
+    .col-7 { grid-column: span 7; } .col-8 { grid-column: span 8; }
+    .col-9 { grid-column: span 9; } .col-10 { grid-column: span 10; }
+    .col-11 { grid-column: span 11; } .col-12 { grid-column: span 12; }
+    .col-start-2 { grid-column-start: 2; } .col-start-3 { grid-column-start: 3; }
+    .col-start-4 { grid-column-start: 4; } .col-start-5 { grid-column-start: 5; }
+    .col-start-7 { grid-column-start: 7; }
+
+    /* Bento Grid — rounded cells with gap */
+    .bb-bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; width: 100%; }
+    .bb-bento > * { border-radius: 16px; padding: 24px; position: relative; }
+    .bb-bento--dark > * { background: var(--bb-dark-card); border: 1px solid var(--bb-border-cool-strong); }
+    .bb-bento--warm > * { background: var(--bb-cream-lightest); border: 1px solid var(--bb-border-warm); }
+
+    /* Grid overlay (visible column guides) */
+    .bb-grid-overlay {
+      position: fixed; inset: 0; z-index: 9999; pointer-events: none;
+      display: none; padding: 0 var(--bb-site-padding);
+      max-width: var(--bb-max-width); margin: 0 auto;
+    }
+    .bb-grid-overlay.is-visible { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; }
+    .bb-grid-overlay > div {
+      background: var(--bb-primary); opacity: 0.04; height: 100%;
+    }
     .bb-row-span-2 { grid-row: span 2; }
 
     .bb-dots { position: relative; }
@@ -174,7 +211,7 @@
 
     .bb-grid-arrow {
       position: absolute; top: 16px; right: 16px; width: 16px; height: 16px; z-index: 2;
-      transition: color 0.15s var(--bb-ease-standard);
+      transition: color 0.15s var(--bb-ease-bounce);
     }
     .bb-grid--dark .bb-grid-arrow { color: var(--bb-text-on-dark-subtle); }
     .bb-grid--warm .bb-grid-arrow { color: var(--bb-text-muted); }
@@ -201,11 +238,18 @@
       .bb-grid-5, .bb-grid-4, .bb-grid-3 { grid-template-columns: repeat(2, 1fr); }
       .bb-col-span-3 { grid-column: span 2; }
       .section { padding: 80px 20px; }
+      .bb-cols, .bb-bento { grid-template-columns: repeat(6, 1fr); gap: 16px; }
+      .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 { grid-column: span 6; }
+      .col-5, .col-6 { grid-column: span 6; }
+      .col-3, .col-4 { grid-column: span 3; }
     }
     @media (max-width: 480px) {
       .bb-grid-5, .bb-grid-4, .bb-grid-3, .bb-grid-2 { grid-template-columns: 1fr; }
       .bb-col-span-2, .bb-col-span-3 { grid-column: span 1; }
       .section { padding: 60px 16px; }
+      .bb-cols, .bb-bento { grid-template-columns: 1fr; }
+      .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+      .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 { grid-column: span 1; }
     }
 
     /* ================================================
@@ -247,7 +291,7 @@
       font-size: 14px; color: var(--bb-text-primary);
       background: var(--bb-cream-lightest); border: 1px solid var(--bb-border-warm);
       border-radius: 12px; outline: none;
-      transition: all 0.15s var(--bb-ease-standard);
+      transition: all 0.15s var(--bb-ease-bounce);
     }
     .bb-input::placeholder { font-family: var(--bb-font-mono); color: var(--bb-text-subtle); font-size: 13px; }
     .bb-input:focus { border-color: var(--bb-primary); box-shadow: 0 0 0 3px var(--bb-primary-10); }
@@ -279,7 +323,7 @@
     .bb-link {
       display: inline-flex; align-items: center; gap: 6px;
       font-family: var(--bb-font-mono); font-size: 13px;
-      transition: color 0.15s var(--bb-ease-standard);
+      transition: color 0.15s var(--bb-ease-bounce);
     }
     .bb-link:hover { color: var(--bb-primary); }
     .bb-link svg { width: 14px; height: 14px; }
@@ -349,7 +393,7 @@
        DEMO HELPERS
        ================================================ */
     .demo-row { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 24px; }
-    .demo-label { font-family: var(--bb-font-mono); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 12px; }
+    .demo-label { font-family: var(--bb-font-mono); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; padding: 6px 0; margin-bottom: 12px; }
     .demo-card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
 
     /* ================================================
@@ -743,8 +787,66 @@
           </div>
         </div>
       </div>
+
+      <!-- 12-Column Layout Grid -->
+      <span class="demo-label" style="display: block; margin: 64px 0 24px; padding-left: 4px; color: var(--bb-text-on-dark-subtle);">12-Column Layout Grid — .bb-cols
+        <button onclick="document.getElementById('grid-overlay').classList.toggle('is-visible')" style="margin-left: 16px; padding: 4px 12px; font-family: var(--bb-font-mono); font-size: 10px; background: var(--bb-cream-10); border: 1px solid var(--bb-border-cool-strong); border-radius: 100px; color: var(--bb-text-on-dark-muted); cursor: pointer; letter-spacing: 0.03em; text-transform: uppercase;">Toggle grid overlay</button>
+      </span>
+      <div class="bb-cols" style="margin-bottom: 16px;">
+        <div class="col-12" style="background: var(--bb-cream-6); border: 1px dashed var(--bb-border-cool-strong); border-radius: 8px; padding: 12px; text-align: center;"><span class="bb-mono" style="color: var(--bb-text-on-dark-subtle); font-size: 11px;">col-12</span></div>
+      </div>
+      <div class="bb-cols" style="margin-bottom: 16px;">
+        <div class="col-6" style="background: var(--bb-cream-6); border: 1px dashed var(--bb-border-cool-strong); border-radius: 8px; padding: 12px; text-align: center;"><span class="bb-mono" style="color: var(--bb-text-on-dark-subtle); font-size: 11px;">col-6</span></div>
+        <div class="col-6" style="background: var(--bb-cream-6); border: 1px dashed var(--bb-border-cool-strong); border-radius: 8px; padding: 12px; text-align: center;"><span class="bb-mono" style="color: var(--bb-text-on-dark-subtle); font-size: 11px;">col-6</span></div>
+      </div>
+      <div class="bb-cols" style="margin-bottom: 16px;">
+        <div class="col-4" style="background: var(--bb-cream-6); border: 1px dashed var(--bb-border-cool-strong); border-radius: 8px; padding: 12px; text-align: center;"><span class="bb-mono" style="color: var(--bb-text-on-dark-subtle); font-size: 11px;">col-4</span></div>
+        <div class="col-4" style="background: var(--bb-cream-6); border: 1px dashed var(--bb-border-cool-strong); border-radius: 8px; padding: 12px; text-align: center;"><span class="bb-mono" style="color: var(--bb-text-on-dark-subtle); font-size: 11px;">col-4</span></div>
+        <div class="col-4" style="background: var(--bb-cream-6); border: 1px dashed var(--bb-border-cool-strong); border-radius: 8px; padding: 12px; text-align: center;"><span class="bb-mono" style="color: var(--bb-text-on-dark-subtle); font-size: 11px;">col-4</span></div>
+      </div>
+      <div class="bb-cols" style="margin-bottom: 16px;">
+        <div class="col-3" style="background: var(--bb-cream-6); border: 1px dashed var(--bb-border-cool-strong); border-radius: 8px; padding: 12px; text-align: center;"><span class="bb-mono" style="color: var(--bb-text-on-dark-subtle); font-size: 11px;">col-3</span></div>
+        <div class="col-6" style="background: var(--bb-cream-6); border: 1px dashed var(--bb-border-cool-strong); border-radius: 8px; padding: 12px; text-align: center;"><span class="bb-mono" style="color: var(--bb-text-on-dark-subtle); font-size: 11px;">col-6</span></div>
+        <div class="col-3" style="background: var(--bb-cream-6); border: 1px dashed var(--bb-border-cool-strong); border-radius: 8px; padding: 12px; text-align: center;"><span class="bb-mono" style="color: var(--bb-text-on-dark-subtle); font-size: 11px;">col-3</span></div>
+      </div>
+
+      <!-- Bento Grid -->
+      <span class="demo-label" style="display: block; margin: 64px 0 24px; padding-left: 4px; color: var(--bb-text-on-dark-subtle);">Bento Grid — .bb-bento (rounded cells, 16px gap)</span>
+      <div class="bb-bento bb-bento--dark">
+        <div class="col-8" style="min-height: 200px; display: flex; flex-direction: column; justify-content: flex-end;">
+          <span class="bb-label" style="color: var(--bb-text-on-dark-subtle);">Featured</span>
+          <h3 class="bb-title" style="color: var(--bb-text-on-dark); margin-top: 8px;">Large feature card spanning 8 columns</h3>
+        </div>
+        <div class="col-4" style="min-height: 200px; display: flex; align-items: center; justify-content: center;" class="bb-dots">
+          <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+            <rect x="5" y="5" width="50" height="50" rx="8" stroke="var(--bb-primary)" stroke-width="1.5" fill="var(--bb-primary)" fill-opacity="0.08"/>
+            <rect x="15" y="20" width="30" height="4" rx="2" fill="var(--bb-primary)" opacity="0.4"/>
+            <rect x="15" y="30" width="20" height="4" rx="2" fill="var(--bb-primary)" opacity="0.25"/>
+          </svg>
+        </div>
+        <div class="col-4" style="min-height: 160px; display: flex; flex-direction: column; justify-content: flex-end;">
+          <span class="bb-label" style="color: var(--bb-text-on-dark-subtle);">Metric</span>
+          <p style="font-size: 36px; font-weight: 600; letter-spacing: -0.02em; color: var(--bb-text-on-dark); margin-top: 4px;">2,847</p>
+          <p class="bb-body-sm" style="color: var(--bb-text-on-dark-muted);">Active users this week</p>
+        </div>
+        <div class="col-4" style="min-height: 160px; display: flex; flex-direction: column; justify-content: flex-end;">
+          <span class="bb-label" style="color: var(--bb-text-on-dark-subtle);">Status</span>
+          <span class="bb-badge bb-badge-primary" style="align-self: flex-start; margin-top: 8px;">All systems operational</span>
+          <p class="bb-body-sm" style="color: var(--bb-text-on-dark-muted); margin-top: 8px;">Last checked 2m ago</p>
+        </div>
+        <div class="col-4" style="min-height: 160px; display: flex; flex-direction: column; justify-content: flex-end;">
+          <span class="bb-label" style="color: var(--bb-text-on-dark-subtle);">Quick action</span>
+          <a class="bb-btn bb-btn-primary bb-btn-sm" style="align-self: flex-start; margin-top: 12px;">Deploy now</a>
+        </div>
+      </div>
     </div>
   </section>
+
+  <!-- Grid overlay (toggled via button) -->
+  <div id="grid-overlay" class="bb-grid-overlay">
+    <div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div>
+  </div>
 
   <!-- ================================================
        05 — COMPONENTS (Cream)
