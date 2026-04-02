@@ -387,7 +387,7 @@
       <h1 class="bb-display hero-title bb-reveal" style="color: var(--bb-text-primary);">
         Build with<br>precision.
       </h1>
-      <p class="hero-description bb-fade-in">
+      <p class="hero-description bb-fade-text">
         A design system that fuses the warmth of artisanal craft with the precision of engineered grids. Every token, every line, every transition — intentional.
       </p>
       <div class="hero-actions bb-fade-in">
@@ -534,21 +534,39 @@
         <div class="bb-grid-figure bb-dots bb-row-span-2" style="min-height: 400px;">
           <span class="bb-fig-label">Fig_02</span>
           <svg class="bb-grid-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12L12 4M12 4H6M12 4V10"/></svg>
-          <svg class="iso-svg" viewBox="0 0 260 300" fill="none">
-            <!-- Bottom cube -->
-            <path class="iso-line" stroke="var(--bb-text-on-dark-subtle)" d="M130 260 L220 210 L220 150 L130 200 Z"/>
-            <path class="iso-line" stroke="var(--bb-text-on-dark-subtle)" d="M130 260 L40 210 L40 150 L130 200 Z"/>
-            <path class="iso-line" stroke="var(--bb-text-on-dark-subtle)" d="M130 200 L220 150 L130 100 L40 150 Z"/>
-            <!-- Middle cube -->
-            <path class="iso-line" stroke="var(--bb-text-on-dark-subtle)" d="M130 200 L200 160 L200 110 L130 150 Z"/>
-            <path class="iso-line" stroke="var(--bb-text-on-dark-subtle)" d="M130 200 L60 160 L60 110 L130 150 Z"/>
-            <path class="iso-fill" fill="var(--bb-primary)" d="M130 150 L200 110 L130 70 L60 110 Z"/>
-            <path class="iso-line" stroke="var(--bb-text-on-dark-subtle)" d="M130 150 L200 110 L130 70 L60 110 Z"/>
-            <!-- Top small cube -->
-            <path class="iso-line" stroke="var(--bb-primary)" stroke-width="1.5" d="M130 130 L170 108 L170 78 L130 100 Z"/>
-            <path class="iso-line" stroke="var(--bb-primary)" stroke-width="1.5" d="M130 130 L90 108 L90 78 L130 100 Z"/>
-            <path class="iso-line" stroke="var(--bb-primary)" stroke-width="1.5" d="M130 100 L170 78 L130 56 L90 78 Z"/>
-            <path class="iso-accent" fill="var(--bb-primary)" d="M130 100 L170 78 L130 56 L90 78 Z"/>
+          <!-- Type 2: UI Mockup — Dashboard Window -->
+          <svg class="iso-svg" viewBox="0 0 260 320" fill="none" style="max-width: 240px;">
+            <!-- Window frame -->
+            <rect x="10" y="30" width="240" height="270" rx="8" stroke="var(--bb-text-on-dark-subtle)" stroke-width="1" fill="var(--bb-dark-card)"/>
+            <!-- Title bar -->
+            <rect x="10" y="30" width="240" height="32" rx="8" stroke="var(--bb-text-on-dark-subtle)" stroke-width="1" fill="none"/>
+            <rect x="10" y="54" width="240" height="8" fill="var(--bb-dark-card)"/>
+            <circle cx="30" cy="46" r="4" fill="var(--bb-primary)" opacity="0.8"/>
+            <circle cx="44" cy="46" r="4" fill="var(--bb-text-on-dark-subtle)" opacity="0.3"/>
+            <circle cx="58" cy="46" r="4" fill="var(--bb-text-on-dark-subtle)" opacity="0.3"/>
+            <!-- Sidebar -->
+            <rect x="10" y="62" width="60" height="238" fill="var(--bb-dark)" stroke="var(--bb-text-on-dark-subtle)" stroke-width="0.5"/>
+            <rect x="20" y="76" width="40" height="4" rx="2" fill="var(--bb-text-on-dark-subtle)" opacity="0.4"/>
+            <rect x="20" y="90" width="32" height="4" rx="2" fill="var(--bb-text-on-dark-subtle)" opacity="0.25"/>
+            <rect x="20" y="104" width="36" height="4" rx="2" fill="var(--bb-primary)" opacity="0.6"/>
+            <rect x="20" y="118" width="28" height="4" rx="2" fill="var(--bb-text-on-dark-subtle)" opacity="0.25"/>
+            <rect x="20" y="132" width="34" height="4" rx="2" fill="var(--bb-text-on-dark-subtle)" opacity="0.25"/>
+            <!-- Main content area -->
+            <rect x="82" y="76" width="100" height="8" rx="2" fill="var(--bb-text-on-dark-subtle)" opacity="0.3"/>
+            <!-- Chart bars -->
+            <rect x="82" y="220" width="20" height="60" rx="2" fill="var(--bb-primary)" opacity="0.2"/>
+            <rect x="108" y="190" width="20" height="90" rx="2" fill="var(--bb-primary)" opacity="0.35"/>
+            <rect x="134" y="210" width="20" height="70" rx="2" fill="var(--bb-primary)" opacity="0.25"/>
+            <rect x="160" y="170" width="20" height="110" rx="2" fill="var(--bb-primary)" opacity="0.5"/>
+            <rect x="186" y="200" width="20" height="80" rx="2" fill="var(--bb-primary)" opacity="0.3"/>
+            <rect x="212" y="150" width="20" height="130" rx="2" fill="var(--bb-primary)" opacity="0.7"/>
+            <!-- Stat cards -->
+            <rect x="82" y="100" width="72" height="48" rx="6" stroke="var(--bb-text-on-dark-subtle)" stroke-width="0.5" fill="none"/>
+            <rect x="92" y="112" width="24" height="6" rx="2" fill="var(--bb-primary)" opacity="0.5"/>
+            <rect x="92" y="124" width="40" height="4" rx="2" fill="var(--bb-text-on-dark-subtle)" opacity="0.2"/>
+            <rect x="162" y="100" width="72" height="48" rx="6" stroke="var(--bb-text-on-dark-subtle)" stroke-width="0.5" fill="none"/>
+            <rect x="172" y="112" width="20" height="6" rx="2" fill="var(--bb-primary)" opacity="0.5"/>
+            <rect x="172" y="124" width="36" height="4" rx="2" fill="var(--bb-text-on-dark-subtle)" opacity="0.2"/>
           </svg>
         </div>
 
@@ -556,24 +574,56 @@
         <!-- Isometric: Monitor -->
         <div class="bb-grid-figure bb-dots" style="min-height: 280px;">
           <span class="bb-fig-label">Fig_03</span>
-          <svg class="iso-svg" viewBox="0 0 240 260" fill="none" style="max-width: 220px;">
-            <!-- Monitor base -->
-            <path class="iso-line" stroke="var(--bb-text-on-dark-subtle)" d="M120 240 L170 213 L120 186 L70 213 Z"/>
-            <!-- Stand -->
-            <path class="iso-line" stroke="var(--bb-text-on-dark-subtle)" d="M120 186 L120 166"/>
-            <path class="iso-line" stroke="var(--bb-text-on-dark-subtle)" d="M105 174 L135 174"/>
-            <!-- Screen body -->
-            <path class="iso-line" stroke="var(--bb-text-on-dark-subtle)" d="M30 166 L120 120 L210 166 L210 76 L120 30 L30 76 Z"/>
-            <path class="iso-line" stroke="var(--bb-text-on-dark-subtle)" d="M30 166 L120 120 L120 30"/>
-            <path class="iso-line" stroke="var(--bb-text-on-dark-subtle)" d="M120 120 L210 166"/>
-            <!-- Screen content -->
-            <path class="iso-fill" fill="var(--bb-primary)" d="M50 148 L120 110 L120 50 L50 88 Z"/>
-            <!-- Screen highlights -->
-            <path class="iso-line" stroke="var(--bb-primary)" stroke-width="0.8" d="M60 130 L100 108"/>
-            <path class="iso-line" stroke="var(--bb-primary)" stroke-width="0.8" d="M60 120 L90 103"/>
-            <path class="iso-line" stroke="var(--bb-primary)" stroke-width="0.8" d="M60 110 L80 98"/>
-            <!-- Right face -->
-            <path class="iso-line" stroke="var(--bb-text-on-dark-subtle)" d="M120 110 L190 148 L190 80 L120 42"/>
+          <!-- Type 1: Semi-flat Diagram — Flow Architecture -->
+          <svg class="iso-svg" viewBox="0 0 220 240" fill="none" style="max-width: 200px;">
+            <!-- Top node -->
+            <rect x="70" y="10" width="80" height="36" rx="6" stroke="var(--bb-primary)" stroke-width="1.5" fill="var(--bb-primary)" fill-opacity="0.1"/>
+            <rect x="86" y="22" width="48" height="4" rx="2" fill="var(--bb-primary)" opacity="0.6"/>
+            <!-- Connector down -->
+            <path d="M110 46 L110 72" stroke="var(--bb-text-on-dark-subtle)" stroke-width="1"/>
+            <circle cx="110" cy="72" r="3" fill="var(--bb-text-on-dark-subtle)" opacity="0.5"/>
+            <!-- Middle row — 3 nodes -->
+            <rect x="10" y="82" width="56" height="36" rx="6" stroke="var(--bb-text-on-dark-subtle)" stroke-width="1" fill="none"/>
+            <rect x="20" y="94" width="28" height="4" rx="2" fill="var(--bb-text-on-dark-subtle)" opacity="0.3"/>
+            <rect x="20" y="102" width="20" height="3" rx="1.5" fill="var(--bb-text-on-dark-subtle)" opacity="0.15"/>
+
+            <rect x="82" y="82" width="56" height="36" rx="6" stroke="var(--bb-primary)" stroke-width="1.5" fill="var(--bb-primary)" fill-opacity="0.08"/>
+            <rect x="92" y="94" width="32" height="4" rx="2" fill="var(--bb-primary)" opacity="0.5"/>
+            <rect x="92" y="102" width="24" height="3" rx="1.5" fill="var(--bb-primary)" opacity="0.2"/>
+
+            <rect x="154" y="82" width="56" height="36" rx="6" stroke="var(--bb-text-on-dark-subtle)" stroke-width="1" fill="none"/>
+            <rect x="164" y="94" width="30" height="4" rx="2" fill="var(--bb-text-on-dark-subtle)" opacity="0.3"/>
+            <rect x="164" y="102" width="22" height="3" rx="1.5" fill="var(--bb-text-on-dark-subtle)" opacity="0.15"/>
+
+            <!-- Connectors from center to sides -->
+            <path d="M110 72 L38 82" stroke="var(--bb-text-on-dark-subtle)" stroke-width="1"/>
+            <path d="M110 72 L110 82" stroke="var(--bb-text-on-dark-subtle)" stroke-width="1"/>
+            <path d="M110 72 L182 82" stroke="var(--bb-text-on-dark-subtle)" stroke-width="1"/>
+
+            <!-- Connectors down from middle row -->
+            <path d="M38 118 L38 148" stroke="var(--bb-text-on-dark-subtle)" stroke-width="1" stroke-dasharray="3 3"/>
+            <path d="M110 118 L110 148" stroke="var(--bb-primary)" stroke-width="1"/>
+            <path d="M182 118 L182 148" stroke="var(--bb-text-on-dark-subtle)" stroke-width="1" stroke-dasharray="3 3"/>
+
+            <!-- Bottom row — output nodes -->
+            <rect x="10" y="148" width="56" height="28" rx="14" stroke="var(--bb-text-on-dark-subtle)" stroke-width="1" fill="none"/>
+            <rect x="24" y="158" width="28" height="4" rx="2" fill="var(--bb-text-on-dark-subtle)" opacity="0.25"/>
+
+            <rect x="82" y="148" width="56" height="28" rx="14" stroke="var(--bb-primary)" stroke-width="1.5" fill="var(--bb-primary)" fill-opacity="0.1"/>
+            <rect x="96" y="158" width="28" height="4" rx="2" fill="var(--bb-primary)" opacity="0.5"/>
+
+            <rect x="154" y="148" width="56" height="28" rx="14" stroke="var(--bb-text-on-dark-subtle)" stroke-width="1" fill="none"/>
+            <rect x="168" y="158" width="28" height="4" rx="2" fill="var(--bb-text-on-dark-subtle)" opacity="0.25"/>
+
+            <!-- Bottom merge -->
+            <path d="M38 176 L110 200" stroke="var(--bb-text-on-dark-subtle)" stroke-width="1" stroke-dasharray="3 3"/>
+            <path d="M110 176 L110 200" stroke="var(--bb-primary)" stroke-width="1"/>
+            <path d="M182 176 L110 200" stroke="var(--bb-text-on-dark-subtle)" stroke-width="1" stroke-dasharray="3 3"/>
+
+            <!-- Final output -->
+            <circle cx="110" cy="200" r="4" fill="var(--bb-primary)" opacity="0.6"/>
+            <rect x="82" y="212" width="56" height="20" rx="4" stroke="var(--bb-primary)" stroke-width="1" fill="var(--bb-primary)" fill-opacity="0.12"/>
+            <rect x="94" y="219" width="32" height="4" rx="2" fill="var(--bb-primary)" opacity="0.4"/>
           </svg>
         </div>
 
@@ -604,23 +654,28 @@
         <div class="bb-grid-figure bb-dots bb-col-span-2">
           <span class="bb-fig-label">Fig_06</span>
           <svg class="bb-grid-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12L12 4M12 4H6M12 4V10"/></svg>
-          <svg class="iso-svg" viewBox="0 0 300 220" fill="none" style="max-width: 280px;">
-            <!-- Back card -->
-            <path class="iso-line" stroke="var(--bb-text-on-dark-subtle)" d="M80 180 L220 108 L220 48 L80 120 Z"/>
-            <path class="iso-line" stroke="var(--bb-text-on-dark-subtle)" d="M80 120 L220 48"/>
-            <!-- Middle card -->
-            <path class="iso-line" stroke="var(--bb-text-on-dark-subtle)" d="M60 170 L200 98 L200 38 L60 110 Z"/>
-            <path class="iso-fill" fill="var(--bb-secondary)" d="M60 170 L200 98 L200 38 L60 110 Z"/>
-            <path class="iso-line" stroke="var(--bb-text-on-dark-subtle)" d="M60 110 L200 38"/>
-            <!-- Front card -->
-            <path class="iso-line" stroke="var(--bb-primary)" stroke-width="1.5" d="M40 160 L180 88 L180 28 L40 100 Z"/>
-            <path class="iso-fill" fill="var(--bb-primary)" d="M40 160 L180 88 L180 28 L40 100 Z"/>
-            <path class="iso-line" stroke="var(--bb-primary)" stroke-width="1.5" d="M40 100 L180 28"/>
-            <!-- Card content lines -->
-            <path stroke="var(--bb-dark)" stroke-width="1" opacity="0.4" d="M55 118 L130 78"/>
-            <path stroke="var(--bb-dark)" stroke-width="1" opacity="0.4" d="M55 128 L115 96"/>
-            <!-- Dot accent -->
-            <circle cx="60" cy="108" r="3" fill="var(--bb-dark)" opacity="0.5"/>
+          <!-- Type 3: Isometric Geometric — Stacked Platform -->
+          <svg class="iso-svg" viewBox="0 0 300 260" fill="none" style="max-width: 280px;">
+            <!-- Bottom platform -->
+            <path d="M150 240 L270 170 L270 155 L150 225 Z" stroke="var(--bb-text-on-dark-subtle)" stroke-width="1" fill="var(--bb-text-on-dark-subtle)" fill-opacity="0.05"/>
+            <path d="M150 240 L30 170 L30 155 L150 225 Z" stroke="var(--bb-text-on-dark-subtle)" stroke-width="1" fill="var(--bb-text-on-dark-subtle)" fill-opacity="0.03"/>
+            <path d="M150 225 L270 155 L150 85 L30 155 Z" stroke="var(--bb-text-on-dark-subtle)" stroke-width="1" fill="var(--bb-text-on-dark-subtle)" fill-opacity="0.08"/>
+            <!-- Grid on top face -->
+            <path d="M90 155 L210 85" stroke="var(--bb-text-on-dark-subtle)" stroke-width="0.5" opacity="0.3"/>
+            <path d="M150 85 L150 225" stroke="var(--bb-text-on-dark-subtle)" stroke-width="0.5" opacity="0.15"/>
+            <path d="M210 120 L210 190" stroke="var(--bb-text-on-dark-subtle)" stroke-width="0.5" opacity="0.2"/>
+            <!-- Middle platform -->
+            <path d="M150 185 L240 135 L240 123 L150 173 Z" stroke="var(--bb-secondary)" stroke-width="1" fill="var(--bb-secondary)" fill-opacity="0.15"/>
+            <path d="M150 185 L60 135 L60 123 L150 173 Z" stroke="var(--bb-secondary)" stroke-width="1" fill="var(--bb-secondary)" fill-opacity="0.1"/>
+            <path d="M150 173 L240 123 L150 73 L60 123 Z" stroke="var(--bb-secondary)" stroke-width="1" fill="var(--bb-secondary)" fill-opacity="0.12"/>
+            <!-- Top platform (accent) -->
+            <path d="M150 140 L210 105 L210 95 L150 130 Z" stroke="var(--bb-primary)" stroke-width="1.5" fill="var(--bb-primary)" fill-opacity="0.2"/>
+            <path d="M150 140 L90 105 L90 95 L150 130 Z" stroke="var(--bb-primary)" stroke-width="1.5" fill="var(--bb-primary)" fill-opacity="0.15"/>
+            <path d="M150 130 L210 95 L150 60 L90 95 Z" stroke="var(--bb-primary)" stroke-width="1.5" fill="var(--bb-primary)" fill-opacity="0.25"/>
+            <!-- Floating dot -->
+            <circle cx="150" cy="42" r="8" stroke="var(--bb-primary)" stroke-width="1.5" fill="var(--bb-primary)" fill-opacity="0.15"/>
+            <circle cx="150" cy="42" r="3" fill="var(--bb-primary)" opacity="0.6"/>
+            <path d="M150 50 L150 60" stroke="var(--bb-primary)" stroke-width="1" opacity="0.4"/>
           </svg>
         </div>
 
@@ -643,18 +698,27 @@
             <p class="bb-body-sm" style="color: var(--bb-text-muted); margin-top: 8px;">CSS custom properties as the portable foundation.</p>
           </div>
         </div>
-        <!-- Isometric: Database cylinder -->
+        <!-- Type 2: UI Mockup — Widget Card (warm) -->
         <div class="bb-grid-figure bb-dots--warm" style="min-height: 180px;">
           <span class="bb-fig-label" style="color: var(--bb-text-muted);">02</span>
-          <svg class="iso-svg" viewBox="0 0 160 180" fill="none" style="max-width: 120px;">
-            <ellipse class="iso-line" stroke="var(--bb-secondary)" cx="80" cy="140" rx="50" ry="18"/>
-            <path class="iso-line" stroke="var(--bb-secondary)" d="M30 140 L30 60"/>
-            <path class="iso-line" stroke="var(--bb-secondary)" d="M130 140 L130 60"/>
-            <ellipse class="iso-fill" fill="var(--bb-primary)" cx="80" cy="60" rx="50" ry="18"/>
-            <ellipse class="iso-line" stroke="var(--bb-primary)" stroke-width="1.5" cx="80" cy="60" rx="50" ry="18"/>
-            <path class="iso-line" stroke="var(--bb-secondary)" d="M30 80 Q80 98 130 80" opacity="0.5"/>
-            <path class="iso-line" stroke="var(--bb-secondary)" d="M30 100 Q80 118 130 100" opacity="0.3"/>
-            <path class="iso-line" stroke="var(--bb-secondary)" d="M30 120 Q80 138 130 120" opacity="0.2"/>
+          <svg class="iso-svg" viewBox="0 0 160 160" fill="none" style="max-width: 130px;">
+            <!-- Card frame -->
+            <rect x="10" y="10" width="140" height="140" rx="10" stroke="var(--bb-secondary)" stroke-width="1" fill="var(--bb-cream-lightest)"/>
+            <!-- Header bar -->
+            <rect x="10" y="10" width="140" height="28" rx="10" stroke="var(--bb-secondary)" stroke-width="1" fill="var(--bb-cream)"/>
+            <rect x="10" y="32" width="140" height="6" fill="var(--bb-cream-lightest)"/>
+            <circle cx="28" cy="24" r="3" fill="var(--bb-primary)" opacity="0.7"/>
+            <rect x="40" y="21" width="40" height="4" rx="2" fill="var(--bb-secondary)" opacity="0.3"/>
+            <!-- Metric big number -->
+            <rect x="24" y="50" width="48" height="10" rx="3" fill="var(--bb-secondary)" opacity="0.6"/>
+            <rect x="24" y="66" width="32" height="4" rx="2" fill="var(--bb-text-muted)" opacity="0.25"/>
+            <!-- Mini sparkline -->
+            <polyline points="24,100 44,88 64,94 84,82 104,86 124,76" stroke="var(--bb-primary)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Dot at end -->
+            <circle cx="124" cy="76" r="3" fill="var(--bb-primary)" opacity="0.8"/>
+            <!-- Bottom label -->
+            <rect x="24" y="118" width="56" height="4" rx="2" fill="var(--bb-text-muted)" opacity="0.2"/>
+            <rect x="24" y="128" width="36" height="4" rx="2" fill="var(--bb-text-muted)" opacity="0.12"/>
           </svg>
         </div>
         <div class="bb-grid-cell" style="min-height: 180px;">
@@ -702,7 +766,7 @@
       </div>
 
       <span class="demo-label" style="color: var(--bb-text-muted);">Cards — Warm</span>
-      <div class="demo-card-grid" style="margin-bottom: 48px;">
+      <div class="demo-card-grid bb-stagger-group" style="margin-bottom: 48px;">
         <div class="bb-card">
           <span class="bb-label" style="display: block; margin-bottom: 16px; color: var(--bb-text-muted);">Module</span>
           <h3 class="bb-title" style="color: var(--bb-text-primary); font-size: 20px; margin-bottom: 8px;">Token system</h3>
@@ -722,7 +786,7 @@
 
       <span class="demo-label" style="color: var(--bb-text-muted);">Cards — Dark</span>
       <div style="background: var(--bb-dark); padding: 32px; border-radius: 20px; margin-bottom: 48px;">
-        <div class="demo-card-grid">
+        <div class="demo-card-grid bb-stagger-group">
           <div class="bb-card-dark" style="padding: 28px;">
             <span class="bb-label" style="display: block; margin-bottom: 16px; color: var(--bb-text-on-dark-subtle);">Feature</span>
             <h3 class="bb-title" style="color: var(--bb-text-on-dark); margin-bottom: 8px; font-size: 20px;">Smooth scroll</h3>
